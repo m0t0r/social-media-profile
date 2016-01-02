@@ -1,0 +1,30 @@
+{
+  "name": "social-media-profile",
+  "version": "0.0.1",
+  "description": "A demo page of social-media profile ",
+  "main": "app.js",
+  "scripts": {
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m0t0r/social-media-profile.git"
+  },
+  "keywords": [
+    "angularjs",
+    "app",
+    "social",
+    "semantic-ui",
+    "demo"
+  ],
+  "author": "Vitaly Tkachenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/m0t0r/social-media-profile/issues"
+  },
+  "homepage": "https://github.com/m0t0r/social-media-profile#readme",
+  "dependencies": {
+    "angular": "1.4.8",
+    "semantic-ui-css": "2.1.7"
+  }
+}
