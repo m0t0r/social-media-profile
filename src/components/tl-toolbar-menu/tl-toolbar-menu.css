@@ -18,11 +18,6 @@
   display: none;
 }
 
-.username {
-  display: inline-block;
-  margin-left: 10px;
-}
-
 /* Desktop media query */
 @media screen and (min-width: 50em) {
   .secondary.attached.menu .mobile.item {

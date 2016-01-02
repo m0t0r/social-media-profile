@@ -3,14 +3,17 @@ import componentsModule from '../index';
 describe('tl-toolbar-menu component', () => {
   'use strict';
   
-  let $compile, elm, scope, toastr;
+  let $compile, elm, scope, toastr, $httpBackend;
 
   beforeEach(window.module(componentsModule.name));
 
   beforeEach(inject(($injector, $rootScope) => {
     $compile = $injector.get('$compile');
     toastr = $injector.get('toastr');
+    $httpBackend = $injector.get('$httpBackend');
     scope = $rootScope.$new();
+
+    $httpBackend.expectJSONP(/http:\/\/www.filltext.com\/\?callback=JSON_CALLBACK&rows=1&fname=\{firstName}&lname=\{lastName}/).respond(200);
   }));
 
   function renderComponent() {
