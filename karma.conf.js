@@ -41,7 +41,8 @@ module.exports = function(config) {
       module: {
         loaders: [
           { test: /\.js$/, exclude: /node_modules/, loader: "babel",  query: { presets: ['es2015']}},
-          { test: /\.css/, exclude: /node_modules/, loader: "style-loader!css-loader"}
+          { test: /\.css/, exclude: /node_modules/, loader: "style-loader!css-loader"},
+          { test: /\.html/, loader: 'raw' }
         ]
       }
     },
