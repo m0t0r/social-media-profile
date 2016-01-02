@@ -26,6 +26,8 @@
   "homepage": "https://github.com/m0t0r/social-media-profile#readme",
   "dependencies": {
     "angular": "1.4.8",
+    "angular-animate": "1.4.8",
+    "angular-toastr": "1.6.0",
     "semantic-ui-css": "2.1.7"
   },
   "devDependencies": {
@@ -41,6 +43,7 @@
     "karma-sourcemap-loader": "0.3.6",
     "karma-webpack": "1.7.0",
     "phantomjs": "1.9.19",
+    "phantomjs-polyfill": "0.0.1",
     "raw-loader": "0.5.1",
     "style-loader": "0.13.0",
     "webpack": "1.12.9",

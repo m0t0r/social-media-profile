@@ -1,0 +1,43 @@
+.secondary.attached.menu .item {
+  display: none;
+}
+
+.secondary.attached.menu .item.header {
+  display: block;
+}
+
+.secondary.attached.menu .mobile.item {
+  display: block;
+}
+
+.secondary.attached.menu .user-menu-profile.item {
+  display: none;
+}
+
+.ui.menu .right.menu.toolbar-menu {
+  display: none;
+}
+
+.username {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+/* Desktop media query */
+@media screen and (min-width: 50em) {
+  .secondary.attached.menu .mobile.item {
+    display: none;
+  }
+
+  .secondary.attached.menu .item {
+     display: block;
+  }
+
+  .secondary.attached.menu .user-menu-profile.item {
+    display: flex;
+  }
+
+  .ui.menu .right.menu.toolbar-menu {
+    display: flex;
+  }
+}

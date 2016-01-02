@@ -15,6 +15,8 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      './node_modules/jquery/dist/jquery.js',
+      './node_modules/phantomjs-polyfill/bind-polyfill.js',
       { pattern: 'spec.bundle.js', watched: false }
     ],
 

@@ -5,7 +5,7 @@ let appComponent = () => {
   return {
     restrict: 'E',
     transclude: true,
-    template: template
+    template
   }
 };
 
