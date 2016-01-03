@@ -3,7 +3,7 @@ import componentsModule from '../index';
 describe('tl-toolbar-menu component', () => {
   'use strict';
   
-  let $compile, elm, scope, toastr, $httpBackend;
+  var $compile, elm, scope, toastr, $httpBackend;
 
   beforeEach(window.module(componentsModule.name));
 

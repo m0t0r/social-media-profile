@@ -3,7 +3,7 @@ import componentsModule from '../index';
 describe('tl-news-feed component', () => {
   'use strict';
 
-  let $compile, elm, $rootScope, scope, $httpBackend, $timeout, RandomService;
+  var $compile, elm, $rootScope, scope, $httpBackend, $timeout, RandomService;
 
   beforeEach(window.module(componentsModule.name));
 

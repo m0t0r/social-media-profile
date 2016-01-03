@@ -3,7 +3,7 @@ import componentsModule from '../index';
 describe('tl-user-status component', () => {
   'use strict';
 
-  let $rootScope, $compile, elm, scope;
+  var $rootScope, $compile, elm, scope;
 
   beforeEach(window.module(componentsModule.name));
 

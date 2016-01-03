@@ -3,7 +3,7 @@ import componentsModule from '../index';
 describe('tl-friends-list component', () => {
   'use strict';
 
-  let $compile, elm, scope, $httpBackend, $timeout;
+  var $compile, elm, scope, $httpBackend, $timeout;
 
   beforeEach(window.module(componentsModule.name));
 

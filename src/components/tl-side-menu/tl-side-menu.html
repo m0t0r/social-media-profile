@@ -1,0 +1,9 @@
+<div class="ui basic segment">
+  <div class="ui vertical text menu">
+    <div class="header item">{{ vm.title }}</div>
+    <a class="item" ng-repeat="item in vm.menuItems" ng-class="{active: item.iconClass === 'newspaper'}">
+      <i class="{{ item.iconClass }} icon"></i>
+      {{ item.title }}
+    </a>
+  </div>
+</div>

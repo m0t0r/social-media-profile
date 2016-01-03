@@ -3,7 +3,7 @@ import componentsModule from '../index';
 describe('tl-user-profile component', () => {
   'use strict';
 
-  let $compile, elm, scope, UserService, $httpBackend;
+  var $compile, elm, scope, UserService, $httpBackend;
 
   beforeEach(window.module(componentsModule.name));
 
