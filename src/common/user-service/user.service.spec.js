@@ -27,6 +27,17 @@ describe('UserService', () => {
     $httpBackend.flush();
   });
 
+  it('should be able to load user profile only once', () => {
+    $httpBackend.expectJSONP(/http:\/\/www.filltext.com\/\?callback=JSON_CALLBACK&rows=1&fname=\{firstName}&lname=\{lastName}/).respond([
+      {fname: 'User', lname: 'Test'}
+    ]);
+
+    UserService.getUserProfile().then(profile => expect(profile.data[0]).toBeDefined());
+    $httpBackend.flush();
+
+    UserService.getUserProfile().then(profile => expect(profile.data[0]).toBeDefined());
+  });
+
   it('should be able to load list of user friends', () => {
     $httpBackend.expectJSONP(/http:\/\/www.filltext.com\/\?callback=JSON_CALLBACK&rows=3&fname=\{firstName}&lname=\{lastName}/).respond([
       {fname: 'User1', lname: 'Test1'},

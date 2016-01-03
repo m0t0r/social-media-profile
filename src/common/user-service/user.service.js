@@ -1,18 +1,25 @@
 class UserService {
 
-  constructor($http, $timeout) {
+  constructor($http, $timeout, $q) {
+    this._profile = null;
     this._baseUrl = 'http://www.filltext.com/?callback=JSON_CALLBACK&';
     this.$http = $http;
     this.$timeout = $timeout;
+    this.$q = $q;
   };
 
   getUserProfile() {
-    return this.$http.jsonp(`${this._baseUrl}rows=1&fname={firstName}&lname={lastName}`)
-      .then(profile => {
-        // mock user avatar
-        profile.data[0].avatarUrl = 'http://lorempixel.com/50/50/people';
-        return profile;
-      });
+    if (!this._profile) {
+      return this.$http.jsonp(`${this._baseUrl}rows=1&fname={firstName}&lname={lastName}`)
+        .then(profile => {
+          // mock user avatar
+          profile.data[0].avatarUrl = 'http://lorempixel.com/50/50/people';
+          this._profile = profile;
+          return this._profile;
+        });
+    } else {
+      return this.$q(resolve => resolve(this._profile));
+    }
   }
 
   getUserFriendsList(rows, delay) {
