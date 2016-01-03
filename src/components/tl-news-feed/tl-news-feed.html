@@ -9,8 +9,11 @@
           <a class="user">
             {{user.fname}} {{ user.lname }}
           </a> {{ user.activity.description }}
-          <div class="date">
+          <div ng-if="user.activity.timeAgo > 0" class="date">
             {{ user.activity.timeAgo }} minutes ago
+          </div>
+          <div ng-if="user.activity.timeAgo === 0" class="date">
+            a few seconds ago
           </div>
         </div>
         <div ng-if="user.activity.name === 'images'" class="extra images">

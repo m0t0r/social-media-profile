@@ -4,7 +4,7 @@ import template from './tl-news-feed.html';
 import './tl-news-feed.css';
 import controller from './tl-news-feed.controller';
 
-let tlNewsFeed = (UserService) => {
+let tlNewsFeed = ($rootScope, UserService) => {
   return {
     restrict: 'E',
     scope: {},
