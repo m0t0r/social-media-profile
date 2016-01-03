@@ -19,7 +19,7 @@ describe('RandomService', () => {
 
   it('should be able to generate random user status', () => {
     let mockUsers = [{fname: 'John'}, {fname: 'Bob'}];
-    RandomService.setRoamdomUserStatus(mockUsers).then((usersWithStatus) => {
+    RandomService.setRandomUserStatus(mockUsers).then((usersWithStatus) => {
       expect(usersWithStatus.length).not.toEqual(1);
     });
   });

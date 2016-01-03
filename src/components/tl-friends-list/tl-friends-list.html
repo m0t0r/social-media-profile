@@ -1,0 +1,14 @@
+<div class="ui segment friends-container">
+  <div class="ui middle aligned friends list">
+    <div class="item" ng-repeat="friend in vm.userFriends">
+      <div class="right floated content">
+        <i ng-if="friend.active" class="green tiny circle icon"></i>
+        <span ng-if="!friend.active">{{ friend.lastOnline }}min</span>
+      </div>
+      <img class="ui avatar image" ng-src="{{ friend.avatarUrl }}">
+      <div class="content">
+        {{ friend.fname }} {{ friend.lname }}
+      </div>
+    </div>
+  </div>
+</div>

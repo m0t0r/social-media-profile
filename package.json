@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --colors",
-    "test": "./node_modules/karma/bin/karma start"
+    "test": "./node_modules/karma/bin/karma start",
+    "test-dev": "./node_modules/karma/bin/karma start --auto-watch --no-single-run"
   },
   "repository": {
     "type": "git",

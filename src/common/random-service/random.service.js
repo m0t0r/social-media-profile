@@ -8,7 +8,7 @@ class RandomService {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-  setRoamdomUserStatus(users) {
+  setRandomUserStatus(users) {
     return this.$q((resolve) => {
       users.forEach((user, index) => {
         let num = this.getRandomInt(1, 59);
