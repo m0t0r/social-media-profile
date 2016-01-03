@@ -10,7 +10,7 @@ class tlFriendsListController {
   }
 
   loadUserFriendsList() {
-    this.userService.getUserFriendsList().then(friends => {
+    this.userService.getUserFriendsList(10, 1000).then(friends => {
       this.randomService.setRandomUserStatus(friends.data).then(friends => this.userFriends = friends);
 
       this.$element.find('.segment').removeClass('loading');

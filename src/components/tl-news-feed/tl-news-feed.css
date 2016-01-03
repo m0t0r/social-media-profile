@@ -1,0 +1,7 @@
+.ui.segment.news-feed-container {
+   min-height: 100vh;
+}
+
+.content .meta .like.liked .icon {
+  color: #FF2733;
+}

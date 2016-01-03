@@ -1,0 +1,30 @@
+<div class="ui segment news-feed-container">
+  <div class="ui feed">
+    <div class="event" ng-repeat="user in vm.userFriends">
+      <div class="label">
+        <img ng-src="{{ user.avatarUrl }}">
+      </div>
+      <div class="content">
+        <div class="summary">
+          <a class="user">
+            {{user.fname}} {{ user.lname }}
+          </a> {{ user.activity.description }}
+          <div class="date">
+            {{ user.activity.timeAgo }} minutes ago
+          </div>
+        </div>
+        <div ng-if="user.activity.name === 'images'" class="extra images">
+          <a ng-repeat="img in user.activity.content"><img ng-src="{{ img.url }}"></a>
+        </div>
+        <div ng-if="user.activity.name === 'post'" class="extra text">
+          {{ user.activity.content }}
+        </div>
+        <div class="meta">
+          <a ng-click="vm.addLike(user.activity)" class="like" ng-class="{liked: user.activity.liked}">
+            <i class="like icon"></i> {{user.activity.likes}} Likes
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
