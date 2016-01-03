@@ -15,13 +15,13 @@ class UserService {
       });
   }
 
-  getUserFriendsList() {
-    return this.$http.jsonp(`${this._baseUrl}rows=10&fname={firstName}&lname={lastName}`)
+  getUserFriendsList(rows, delay) {
+    return this.$http.jsonp(`${this._baseUrl}rows=${rows}&fname={firstName}&lname={lastName}`)
       .then(friends => {
         // mock user avatars
         friends.data.forEach((userObject, index) => userObject.avatarUrl = `http://lorempixel.com/50/50/people/${index}`);
         // simulate a little delay
-        return this.$timeout(() => { return friends }, 1000);
+        return this.$timeout(() => { return friends }, delay);
       });
   }
 }

@@ -20,7 +20,16 @@ describe('RandomService', () => {
   it('should be able to generate random user status', () => {
     let mockUsers = [{fname: 'John'}, {fname: 'Bob'}];
     RandomService.setRandomUserStatus(mockUsers).then((usersWithStatus) => {
-      expect(usersWithStatus.length).not.toEqual(1);
+      expect(usersWithStatus[0].active).toBeDefined();
+      expect(usersWithStatus[1].active).toBeDefined();
+    });
+  });
+
+  it('should be able to generate random user activity', () => {
+    let mockUsers = [{fname: 'James'}, {fname: 'Tom'}];
+    RandomService.setRandomUserActivity(mockUsers).then((usersWithActivity) => {
+      expect(usersWithActivity[0].activity).toBeDefined();
+      expect(usersWithActivity[1].activity).toBeDefined();
     });
   });
 });
