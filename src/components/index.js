@@ -10,6 +10,7 @@ import tlFriendsList from './tl-friends-list/tl-friends-list.component';
 import tlNewsFeed from './tl-news-feed/tl-news-feed.component';
 import tlUserStatus from './tl-user-status/tl-user-status.component';
 import tlSideMenu from './tl-side-menu/tl-side-menu.component';
+import tlPeopleYouMayKnow from './tl-people-you-may-know/tl-people-you-may-know.component';
 
 let componentsModule = angular
   .module('app.components', [
@@ -22,6 +23,7 @@ let componentsModule = angular
   .directive('tlFriendsList', tlFriendsList)
   .directive('tlNewsFeed', tlNewsFeed)
   .directive('tlUserStatus', tlUserStatus)
-  .directive('tlSideMenu', tlSideMenu);
+  .directive('tlSideMenu', tlSideMenu)
+  .directive('tlPeopleYouMayKnow', tlPeopleYouMayKnow);
 
 export default  componentsModule;

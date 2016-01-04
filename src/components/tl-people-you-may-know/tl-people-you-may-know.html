@@ -1,0 +1,20 @@
+<div ng-hide="vm.noUsersToSuggest" class="ui segment suggested-friends-container">
+  <div class="ui tiny aligned list">
+    <div class="item">
+      <div class="header">People you may know</div>
+    </div>
+    <div class="item" ng-repeat="person in vm.suggestedPeople">
+      <div class="right floated content">
+        <div class="ui mini buttons">
+          <button class="ui teal button" ng-click="vm.addUser(person)">Add</button>
+          <div class="or"></div>
+          <button class="ui button" ng-click="vm.skipUser(person)">Skip</button>
+        </div>
+      </div>
+      <img class="ui avatar image" ng-src="{{ person.avatarUrl }}">
+      <div class="content">
+        {{ person.fname }} {{ person.lname }}
+      </div>
+    </div>
+  </div>
+</div>
