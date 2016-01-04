@@ -3,11 +3,12 @@ import componentsModule from '../index';
 describe('tl-friends-list component', () => {
   'use strict';
 
-  var $compile, elm, scope, $httpBackend, $timeout;
+  var $rootScope, $compile, elm, scope, $httpBackend, $timeout;
 
   beforeEach(window.module(componentsModule.name));
 
-  beforeEach(inject(($injector, $rootScope) => {
+  beforeEach(inject(($injector) => {
+    $rootScope = $injector.get('$rootScope');
     $compile = $injector.get('$compile');
     $httpBackend = $injector.get('$httpBackend');
     $timeout = $injector.get('$timeout');
@@ -81,5 +82,19 @@ describe('tl-friends-list component', () => {
     scope.$apply();
 
     expect(component.find('.floated.content:eq(0) span').text()).toEqual('17min');
+  });
+
+  it('should be able to add a user as friend on event', () => {
+    let component = renderComponent();
+    let controller = component.controller('tlFriendsList');
+    $httpBackend.flush();
+    $timeout.flush();
+
+    expect(controller.userFriends.length).toEqual(3);
+
+    $rootScope.$broadcast('add-suggested-user', {fname: 'James', lname: 'Bond'});
+
+    expect(controller.userFriends.length).toEqual(4);
+    expect(controller.userFriends[0].fname).toEqual('James');
   });
 });

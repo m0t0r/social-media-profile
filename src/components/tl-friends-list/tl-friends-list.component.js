@@ -4,7 +4,7 @@ import template from './tl-friends-list.html';
 import './tl-friends-list.css';
 import controller from './tl-friends-list.controller';
 
-let tlFriendsList = (UserService) => {
+let tlFriendsList = ($rootScope, UserService) => {
   return {
     restrict: 'E',
     scope: {},
