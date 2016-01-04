@@ -1,5 +1,5 @@
 .ui.middle.aligned.friends.list >.item [class*="right floated"] {
-  padding: 14px 0;
+  padding: 7px 0 14px 0;
 }
 
 .ui.segment.friends-container {
