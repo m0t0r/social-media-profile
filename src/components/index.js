@@ -1,4 +1,5 @@
 'use strict';
+
 import angular from 'angular';
 import ngAnimate from 'angular-animate';
 import toastr from 'angular-toastr';

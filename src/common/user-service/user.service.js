@@ -1,11 +1,14 @@
+'use strict';
+
 class UserService {
 
   constructor($http, $timeout, $q) {
-    this._profile = null;
-    this._baseUrl = 'http://www.filltext.com/?callback=JSON_CALLBACK&';
     this.$http = $http;
     this.$timeout = $timeout;
     this.$q = $q;
+
+    this._profile = null;
+    this._baseUrl = 'http://www.filltext.com/?callback=JSON_CALLBACK&';
   };
 
   getUserProfile() {

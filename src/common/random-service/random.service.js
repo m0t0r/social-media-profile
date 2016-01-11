@@ -1,7 +1,13 @@
+'use strict';
+
 class RandomService {
 
   constructor($q) {
     this.$q = $q;
+    this.initMockUsersActivities();
+  }
+
+  initMockUsersActivities() {
     this.mockUserActivities = [
       {
         name: 'friendship',
@@ -34,7 +40,7 @@ class RandomService {
         likes: this.getRandomInt(1, 100),
         timeAgo: this.getRandomInt(1, 59)
       }
-    ]
+    ];
   }
 
   getRandomInt(min, max) {

@@ -1,4 +1,5 @@
 'use strict';
+
 import angular from 'angular';
 
 import UserService from './user-service/user.service';

@@ -1,3 +1,5 @@
+'use strict';
+
 import template from './tl-user-profile.html';
 import './tl-user-profile.css';
 import controller from './tl-user-profile.controller';

@@ -1,3 +1,5 @@
+'use strict';
+
 class tlUserProfileController {
 
   constructor(UserService) {

@@ -1,3 +1,5 @@
+'use strict';
+
 class tlNewsFeedController {
 
   constructor($rootScope, $element, UserService, RandomService) {

@@ -1,3 +1,5 @@
+'use strict';
+
 class tlFriendsListController {
 
   constructor($element, $rootScope, UserService, RandomService) {

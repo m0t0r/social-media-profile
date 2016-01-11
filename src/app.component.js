@@ -1,4 +1,5 @@
 'use strict';
+
 import template from './app.component.html';
 import controller from './app.controller';
 

@@ -1,3 +1,5 @@
+'use strict';
+
 class tlToolbarMenuController {
 
   constructor($element, toastr) {

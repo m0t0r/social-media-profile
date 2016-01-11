@@ -1,3 +1,5 @@
+'use strict';
+
 class tlPeopleYouMayKnowController {
 
   constructor($rootScope, $element, UserService) {

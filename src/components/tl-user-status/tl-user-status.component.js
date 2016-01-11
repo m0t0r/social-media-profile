@@ -1,3 +1,5 @@
+'use strict';
+
 import template from './tl-user-status.html';
 import './tl-user-status.css';
 import controller from './tl-user-status.controller';
