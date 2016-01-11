@@ -34,4 +34,4 @@ npm run test-dev
 
 License
 -------
-MIT
+MIT.
