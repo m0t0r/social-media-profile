@@ -31,14 +31,17 @@ class tlNewsFeedController {
   _addListenerForUserStatusChange() {
     this.$rootScope.$on('tl-user-status', (e, status) => {
       this.userService.getUserProfile().then(profile => {
-        profile.data[0].activity = {
+        var profileCopy = {};
+        angular.copy(profile.data[0], profileCopy);
+
+        profileCopy.activity = {
           name: 'post',
           description: 'updated his/her status',
           content: status,
           likes: 0,
           timeAgo: 0
         };
-        this.userFriends.unshift(profile.data[0]);
+        this.userFriends.unshift(profileCopy);
       });
     });
   }

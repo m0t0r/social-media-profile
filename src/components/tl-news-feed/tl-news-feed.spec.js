@@ -142,4 +142,27 @@ describe('tl-news-feed component', () => {
     expect(controller.userFriends.length).toEqual(3);
     expect(controller.userFriends[0].activity.description).toEqual('updated his/her status');
   });
+
+  it('should be able to post multiple user statuses', () => {
+    let component = renderComponent();
+    let controller = component.controller('tlNewsFeed');
+    $httpBackend.flush();
+    $timeout.flush();
+
+    expect(controller.userFriends.length).toEqual(2);
+
+    $httpBackend.expectJSONP(/http:\/\/www.filltext.com\/\?callback=JSON_CALLBACK&rows=1&fname=\{firstName}&lname=\{lastName}/).respond([
+      {fname: 'User', lname: 'Test'}
+    ]);
+    $rootScope.$broadcast('tl-user-status', 'test status 1');
+    $httpBackend.flush();
+
+    expect(controller.userFriends.length).toEqual(3);
+
+    $rootScope.$broadcast('tl-user-status', 'test status 2');
+    scope.$apply();
+
+    expect(controller.userFriends.length).toEqual(4);
+    expect(controller.userFriends[0].activity.content).toEqual('test status 2');
+  });
 });
