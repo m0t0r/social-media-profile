@@ -1,5 +1,6 @@
 # social-media-profile
 
+[![Build Status](https://travis-ci.org/m0t0r/social-media-profile.svg?branch=master)](https://travis-ci.org/m0t0r/social-media-profile)
 [![Dependency Status](https://david-dm.org/m0t0r/social-media-profile.svg)](https://david-dm.org/m0t0r/social-media-profile)
 [![devDependency Status](https://david-dm.org/m0t0r/social-media-profile/dev-status.svg)](https://david-dm.org/m0t0r/social-media-profile#info=devDependencies)
 
